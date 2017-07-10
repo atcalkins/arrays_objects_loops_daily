@@ -17,7 +17,7 @@ let numbers = [ 1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6 ];
 function getFourthNum(){
     // Your answer here:
     return numbers[3];
-}
+  }
 
 /*
 2. Iterate over the "numbers" array. Push any numbers less than 10 onto "smallNums". Return "smallNums".
@@ -27,11 +27,11 @@ function smallNums(){
     // Your answer here:
     for(let i = 0; i < numbers.length; i++) {
       if (numbers[i] < 10) {
-      smallNums.push (numbers);
-      }
+      smallNums.push(numbers[i])
+     }
     }
-      return numbers;
-    }
+      return smallNums;
+}
 
 
 /*
@@ -41,7 +41,7 @@ function addNums(){
     // Your answer here:
     numbers.push (12, 99, 101);
     return numbers;
-}
+};
 
 
 /********************
@@ -65,7 +65,7 @@ function addBoxOffice(){
     // Your answer here:
     film.boxoffice = 269061;
     return film;
-}
+};
 
 /*
 5. Add the name "Yukiko Shimazaki" to the "actors" array. Return "film";
@@ -75,16 +75,20 @@ function addActor(){
     // Your answer here:
     film.actors.push('Yukiko Shimazaki');
     return film;
-}
+};
 
 /*
 6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
 */
 function getLosses(){
     // Your answer here:
-
-}
-
+      for (let i = 0; i < film.budget; i++) {
+      for (let j = 0; i < film.property; i++) {
+        let loss = (j[i] - i[i]);
+      }
+      }
+    return loss;
+  }
 
 
 
@@ -96,15 +100,17 @@ function getLosses(){
 Your function should return [ "v5", "x67", "r34", "f456", "p78" ];
 */
 
-let numberVals = [ 5, 67, 34, 456, 78 ];
-let letterVals = [ "v", "x", "r", "f", "p" ];
-
+// let numberVals = [ 5, 67, 34, 456, 78 ];
+// let letterVals = [ "v", "x", "r", "f", "p" ];
+//
 function interleave(){
     let vals = [];
     // Your answer here:
+    for (let i = 0; i < numberVals.length; i++) {
+      vals.push(letterVals[i] += numberVals[i])
+    }
+      return vals;
 }
-
-
 
 
 
@@ -119,12 +125,9 @@ let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close"
 function union(){
     let same = [];
     // Your answer here:
-    function arraysIdentical(first, second) {
-    var i = first.length;
-    if (i != second.length) return false;
-    while (i--) {
-        if (first[i] !== second[i]) return false;
-    }
-    return true;
-}
-}
+    for(let i = 0; i < first.length; i++) {
+      if(first[i] === second[i]) {
+        same.push(first[i]);
+      }
+    } return same;
+  }

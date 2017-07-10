@@ -16,8 +16,8 @@ let numbers = [ 1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6 ];
 */
 function getFourthNum(){
     // Your answer here:
-    return numbers[3];
-  }
+    return numbers[3]
+}
 
 /*
 2. Iterate over the "numbers" array. Push any numbers less than 10 onto "smallNums". Return "smallNums".
@@ -25,12 +25,12 @@ function getFourthNum(){
 function smallNums(){
     let smallNums = [];
     // Your answer here:
-    for(let i = 0; i < numbers.length; i++) {
+    for (let i = 0; i < numbers.length; i++) {
       if (numbers[i] < 10) {
-      smallNums.push(numbers[i])
-     }
+        smallNums.push(numbers[i]);
+      }
     }
-      return smallNums;
+    return smallNums;
 }
 
 
@@ -82,10 +82,10 @@ function addActor(){
 */
 function getLosses(){
     // Your answer here:
-    return film.boxoffice - film.budget;
-
-
-
+    let loss = 0;
+    loss = film.boxoffice - film.budget;
+    return loss;
+}
 
 /*
 7. Iterate over "letterVals" and "numberVals". Concatenate the values from the two arrays and store the new values in the "vals" array. Return "vals".
@@ -118,9 +118,12 @@ let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close"
 function union(){
     let same = [];
     // Your answer here:
-    for(let i = 0; i < first.length; i++) {
-      if(first[i] === second[i]) {
-        same.push(first[i]);
+    for (let i = 0; i < first.length; i++) {
+      for (let j = 0; j < second.length; j++) {
+        if (first[i] == second[j]) {
+          same.push(second[j]);
+        }
       }
-    } return same;
-  }
+    }
+    return same;
+}

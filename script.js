@@ -82,14 +82,7 @@ function addActor(){
 */
 function getLosses(){
     // Your answer here:
-      for (let i = 0; i < film.budget; i++) {
-      for (let j = 0; i < film.property; i++) {
-        let loss = (j[i] - i[i]);
-      }
-      }
-    return loss;
-  }
-
+    return film.boxoffice - film.budget;
 
 
 
